@@ -1,0 +1,48 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 0 and seed 21 with 1 worker on 1 cores with 494MB heap and 64MB offheap memory [pid: 45096] (Mac OS X 26.7.1 x86_64, Azul Systems, Inc. 17.0.17 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/luchoduran/Sites/open-source-projects/agent-policy-state-machine/formal/Policy.tla
+Parsing file /private/var/folders/6x/v56hfn7s5m7gt4t9k54dyg180000gn/T/Naturals.tla
+Parsing file /private/var/folders/6x/v56hfn7s5m7gt4t9k54dyg180000gn/T/FiniteSets.tla
+Parsing file /private/var/folders/6x/v56hfn7s5m7gt4t9k54dyg180000gn/T/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Policy
+Starting... (2026-11-09 17:18:41)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-09 17:18:41.
+Error: Invariant Authorization is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ result = "init"
+/\ seen = {}
+/\ applied = 0
+/\ authorized = FALSE
+/\ event = "init"
+/\ phase = "new"
+/\ reverted = 0
+
+State 2: <Step line 34, col 5 to line 44, col 53 of module Policy>
+/\ result = "accepted"
+/\ seen = {"plan"}
+/\ applied = 0
+/\ authorized = FALSE
+/\ event = "plan"
+/\ phase = "planned"
+/\ reverted = 0
+
+State 3: <Step line 34, col 5 to line 44, col 53 of module Policy>
+/\ result = "accepted"
+/\ seen = {"plan", "execute"}
+/\ applied = 1
+/\ authorized = FALSE
+/\ event = "execute"
+/\ phase = "executing"
+/\ reverted = 0
+
+14 states generated, 14 distinct states found, 11 states left on queue.
+The depth of the complete state graph search is 3.
+The average outdegree of the complete state graph is 9 (minimum is 9, the maximum 9 and the 95th percentile is 9).
+Finished in 00s at (2026-11-09 17:18:41)

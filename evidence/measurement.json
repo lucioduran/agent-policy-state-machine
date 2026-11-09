@@ -1,0 +1,76 @@
+{
+  "code_commit": "9a8273d57ecf691f5dc36207f2ce4877875f1dd4",
+  "worktree_status": "?? evidence/\n",
+  "platform": "macOS-26.7.1-x86_64-i386-64bit-Mach-O",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "machine": "x86_64",
+  "cpu_count": 16,
+  "hardware": "Intel(R) Xeon(R) W-3223 CPU @ 3.50GHz\n51539607552\n",
+  "java": "openjdk version \"17.0.17\" 2025-10-21 LTS\nOpenJDK Runtime Environment Zulu17.62+17-CA (build 17.0.17+10-LTS)\nOpenJDK 64-Bit Server VM Zulu17.62+17-CA (build 17.0.17+10-LTS, mixed mode, sharing)\n",
+  "runs": [
+    {
+      "name": "correct",
+      "command": [
+        "java",
+        "-XX:ActiveProcessorCount=1",
+        "-Xmx512m",
+        "-cp",
+        "/Users/luchoduran/Sites/open-source-projects/agent-policy-state-machine/.tools/tla2tools.jar",
+        "tlc2.TLC",
+        "-workers",
+        "1",
+        "-seed",
+        "21",
+        "-fp",
+        "0",
+        "-metadir",
+        "/Users/luchoduran/Sites/open-source-projects/agent-policy-state-machine/work/correct",
+        "-config",
+        "/Users/luchoduran/Sites/open-source-projects/agent-policy-state-machine/formal/Policy.cfg",
+        "-dump",
+        "dot",
+        "/Users/luchoduran/Sites/open-source-projects/agent-policy-state-machine/evidence/states.dot",
+        "/Users/luchoduran/Sites/open-source-projects/agent-policy-state-machine/formal/Policy.tla"
+      ],
+      "started_utc": "2026-11-09T20:18:39.861683+00:00",
+      "elapsed_seconds": 1.0845658629987156,
+      "returncode": 0
+    },
+    {
+      "name": "faulty",
+      "command": [
+        "java",
+        "-XX:ActiveProcessorCount=1",
+        "-Xmx512m",
+        "-cp",
+        "/Users/luchoduran/Sites/open-source-projects/agent-policy-state-machine/.tools/tla2tools.jar",
+        "tlc2.TLC",
+        "-workers",
+        "1",
+        "-seed",
+        "21",
+        "-fp",
+        "0",
+        "-metadir",
+        "/Users/luchoduran/Sites/open-source-projects/agent-policy-state-machine/work/faulty",
+        "-config",
+        "/Users/luchoduran/Sites/open-source-projects/agent-policy-state-machine/formal/Faulty.cfg",
+        "/Users/luchoduran/Sites/open-source-projects/agent-policy-state-machine/formal/Policy.tla"
+      ],
+      "started_utc": "2026-11-09T20:18:40.947146+00:00",
+      "elapsed_seconds": 1.0846299109980464,
+      "returncode": 12
+    }
+  ],
+  "sha256": {
+    ".tools/tla2tools.jar": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88",
+    "formal/Faulty.cfg": "9ff90eb869541bdecbe15797c251660b91ad883db41e14d0463d1427653c91f4",
+    "formal/Policy.cfg": "fef76f20e3107493a6ea57b948abb7c5fee101e88692da1b83f452a3c8f9c574",
+    "formal/Policy.tla": "46d698208ac30b74b0c5385f6111e100807061e66c549f32b3b668a2d14eeda9",
+    "src/agent_policy/__init__.py": "0a918e1cf3f469f3fc6b5a8fac63b19fbeba83bd5726127074ca377c14ff7d8b",
+    "src/agent_policy/cli.py": "8872d00e1c89286dc479de961a96893f5959520eba6efeaaaeb67836407341d0",
+    "src/agent_policy/runtime.py": "d1e363c7b1bef8cbbfb017855b30884f330931466e62108a62db49769ac8cb03",
+    "scripts/measure.py": "35e02bfdc548b410941183f4897937765c4d5769831d53d6f0d9379e1d9fd4e8",
+    "uv.lock": "4bd82e54c102047a01213b039f3aa670f482f081ad23dd9a3712d553dae2c292"
+  }
+}

@@ -1,0 +1,8 @@
+Conformance development failure observed on 2026-11-09.
+Command: benchmark_lock.py .venv/bin/python scripts/replay.py --record
+Code commit: d0feb48
+Outcome: ValueError: unrecognized DOT line: {rank = same; -8444760614246986176;}
+The strict parser initially omitted TLC's rank layout syntax. No conformance
+success or runtime observations were recorded for that attempt. The parser now
+accepts only the numeric rank format, while retaining strict node/edge checks.
+This note transcribes the observed error; it is not a full subprocess log.

@@ -1,0 +1,21 @@
+{
+  "started_utc": "2026-11-09T20:20:14.821954+00:00",
+  "elapsed_seconds": 0.13774415099760517,
+  "command": [
+    "/Users/luchoduran/Sites/open-source-projects/agent-policy-state-machine/.venv/bin/python",
+    "scripts/replay.py",
+    "--record"
+  ],
+  "returncode": 0,
+  "stdout": "{\"conforming_edges\": 981, \"counterexample_blocked\": true}\n",
+  "stderr": "",
+  "code_commit": "30aa48bfe943dc84b8ae2cdf8fde74e138046f13",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "hardware_reference": "evidence/measurement.json",
+  "sha256": {
+    "scripts/replay.py": "e8f9facecc10e3b35b8a24ec82b1cddacbf1b75295adfa9e1602be9e353fc0d5",
+    "scripts/record_runtime.py": "d46ac8903d4b6f38df73e3e977fac29800bce40fa4ce5ebfff0256cad527899e",
+    "src/agent_policy/runtime.py": "d1e363c7b1bef8cbbfb017855b30884f330931466e62108a62db49769ac8cb03",
+    "evidence/states.dot": "f694c49ff9d556ba7dd8a4580e7b40e77f9f30b669775de1678b1064c5494b89"
+  }
+}

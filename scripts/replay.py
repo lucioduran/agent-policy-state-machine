@@ -52,6 +52,8 @@ def parse_graph(path):
             if node[1] in nodes:
                 raise ValueError("duplicate graph node")
             nodes[node[1]] = fields
+        elif re.fullmatch(r"\{rank = same; (?:-?\d+;)+\}", line):
+            continue
         elif line not in {
             "strict digraph DiskGraph {",
             "nodesep=0.35;",
